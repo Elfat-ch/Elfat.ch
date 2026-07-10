@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Malak</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stage" id="stage" aria-label="Animazione per Malak">
+    <div class="video-bg" aria-hidden="true">
+      <iframe
+        src="https://www.youtube.com/embed/RG8438PcnlU?autoplay=1&mute=1&loop=1&playlist=RG8438PcnlU&controls=0&modestbranding=1&playsinline=1&rel=0&showinfo=0&disablekb=1&fs=0&iv_load_policy=3"
+        title="Sfondo video"
+        frameborder="0"
+        allow="autoplay; encrypted-media; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <section class="intro" id="intro">
+      <div class="locked-heart-intro" aria-hidden="true">
+        <div class="platinum-heart-wrap">
+          <div class="platinum-heart"></div>
+          <div class="platinum-lock">
+            <span class="lock-shackle"></span>
+            <span class="lock-body"></span>
+            <span class="lock-keyhole"></span>
+          </div>
+        </div>
+      </div>
+      <button class="start-button" id="startButton" type="button">
+        <span class="button-heart" aria-hidden="true"></span>
+        <span class="button-text">click me</span>
+      </button>
+    </section>
+
+    <section class="show" id="show" aria-live="polite">
+      <div class="video-tint" aria-hidden="true"></div>
+      <div class="bow-field" aria-hidden="true">
+        <span class="kitty-bow bow-1"></span>
+        <span class="kitty-bow bow-2"></span>
+        <span class="kitty-bow bow-3"></span>
+        <span class="kitty-bow bow-4"></span>
+        <span class="kitty-bow bow-5"></span>
+      </div>
+      <div class="kitty-stickers" aria-hidden="true">
+        <img class="kitty-sticker sticker-left" src="hello_kitty_PNG12.png" alt="">
+        <img class="kitty-sticker sticker-right" src="hello_kitty_PNG20.png" alt="">
+      </div>
+      <canvas class="spark-canvas" id="sparkCanvas"></canvas>
+
+      <div class="scene scene-heart is-active" id="sceneHeart">
+        <div class="heart-wrap">
+          <div class="name-heart" id="nameHeart" aria-label="Cuore con il nome Malak"></div>
+          <div class="name-glow">Malak</div>
+        </div>
+      </div>
+
+      <div class="scene scene-birthday" id="sceneBirthday">
+        <div class="birthday-show">
+          <div class="orbit-field" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p class="birthday-kicker">Il tuo giorno</p>
+          <h1>Buon compleanno Malak</h1>
+          <div class="wish-line">
+            <span>ti amo</span>
+            <span>sei speciale</span>
+            <span>per sempre</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="scene scene-photo" id="scenePhoto">
+        <div class="photo-ring">
+          <img src="assets/malak.jpg" alt="Malak" id="malakPhoto">
+          <div class="photo-fallback" id="photoFallback">
+            <span>Malak</span>
+          </div>
+        </div>
+        <p class="photo-caption">La ragazza che amo</p>
+      </div>
+
+      <div class="scene scene-message" id="sceneMessage">
+        <article class="love-message" id="loveMessage">
+          <p class="small">Per te, Malak</p>
+          <h1>La mia lettera per te</h1>
+          <p>
+            Buon compleanno Malak, so che forse sembrerà poco ma non saprei cosa regalarti essendo che non siamo vicini ma siamo ancora distanti se ti avrei qui da me ti avrei fatto un regalo fantastico e sotto ti avrei coccolato perché so che ti piacciono tanto le coccole e le carezze. ❤️
+          </p>
+          <p>
+            Sono felice di darti il tuo primo buon compleanno perché abbiamo quasi fatto 1 anno insieme e questi sono i miei primi auguri che ti faccio da quando ti conosco e da quando ci siamo innamorati. 💘
+          </p>
+          <p>
+            Sei una ragazza fantastica splendente che sorride sempre dove quando vedo che ti ho fatto pure rinascere da una parte dove capisco ciò che provi dopo nel tempo ho capito che penso a sei ogni giorno che passa. 💕
+          </p>
+          <p>
+            Sei una ragazza fantastica che come ti ho sempre detto brilli sui miei occhi fantastici dove anche se sbaglio mi accetti sempre dove anche se sbagli tu ti accetto sempre ed amo quelle piccole parti di te. 💙
+          </p>
+          <p>
+            Sei una ragazza intelligente di intelletto leale e fantastica che fa di tutto per il proprio ragazzo dove se non ci sono e come che ti manca una parte di te perché penso che quella parte di te ci sono io come anche nel mio cuore una parte di te è costruita da te. 💜
+          </p>
+          <p>
+            Dove ogni giorno che passa con te mi innamoro sempre di più non solo della bellezza di quanto sei una ragazza bellissima che brilla che mi innamoro pure dei tuoi fantastici modi di fare vedere che sorridi che dici la tua che sei aperta con me e ciò che mi fa capire quanto tu ci tieni a me dove vedo che ti togli quello scudo e vieni da me perché vuoi ricevere quel amore fantastico che ti piace provare con me dove ritorni sul mio cuore dopo una giornata stancante perché sai che io ci sono sempre e non mi stuferò mai di te. 💖
+          </p>
+          <p>
+            Amo la tua indipendenza il tuo modo di fare essere una ragazza in gamba non cambiare mai ma pensarla nel tuo di modo e che se non va bene una cosa chiedi a me perché sai che ti dico la verità e sono leale. 💛
+          </p>
+          <p>
+            Amo quando mi fai vedere i vestiti indossati amo vedere i vestiti che ti compri sono fantastici e quando ti vedo vedo quanto tu sei fantastica per me è bellissima quando penso che ti sta davvero tutto per bene eh che quando vedo che mi riscaldi perché non tengo perché sei bellissima come un fiore. 💞
+          </p>
+          <p>
+            Ti amo più di qualsiasi altra cosa al mondo.
+          </p>
+          <p>
+            Il tuo valore per me non si può contare con le dita e nemmeno con una calcolatrice sai quando ci sono così tanti numeri che anche una calcolatrice/macchina va in errore(tilt)? Ecco il tuo valore per me è ancora più grande sei qualcosa di incalcolabile qualcosa che nessuna macchina e nessun numero potranno mai spiegare davvero. 🤍
+          </p>
+          <p>
+            Malak continuerei con te tutti i giorni che passano e scusa scusa scusa di tutti i miei errori passati mi perdono e quando ci metto il cuore sai che ciò che dico e vero e che viene dal profondo del mio cuore. ❤️‍🔥
+          </p>
+          <p>
+            Se potevamo incontrarci sarei già venuto per regalarti qualcosa di grande ma non nah ho la possibilità dalla distanza che abbiamo per quello che quando ci rincontreremo Inshallah ti farò i regali che ti ho detto e ti darò davvero il bacio sulle labbra per farti felice e contenta e farti rimanere qualcosa di me provato dove insieme abbiamo provato una cosa che abbiamo sempre voluto.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

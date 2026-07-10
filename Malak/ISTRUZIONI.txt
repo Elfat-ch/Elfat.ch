@@ -1,0 +1,27 @@
+COME USARLO
+
+1. Metti la foto di Malak dentro la cartella assets.
+2. Rinomina la foto esattamente cosi: malak.jpg
+   Puoi aggiungere anche altre due foto con questi nomi:
+   image0.jpg
+   image1.jpg
+   Nella scena della foto il sito mostrera prima malak.jpg, poi image0.jpg, poi image1.jpg.
+3. Per vedere anche il video YouTube di sfondo, usa questo link:
+   http://127.0.0.1:5500/
+4. Se il link non funziona, apri il terminale in questa cartella e scrivi:
+   node server.js
+   poi riapri http://127.0.0.1:5500/
+5. All'inizio vedrai tutto nero con il cuore e la scritta "click me".
+   Il video di sfondo viene gia caricato dietro questa schermata.
+   Prima del bottone appare per 3 secondi un cuore platino chiuso con lucchetto.
+6. Alla fine comparira la lettera lunga: su telefono si puo scorrere con il dito.
+
+NOTA VIDEO
+
+Il video di YouTube deve partire muto, perche Chrome e i telefoni bloccano quasi sempre l'autoplay con audio.
+Il video viene caricato subito, ma resta invisibile per circa 2 secondi per nascondere i pulsanti/menu iniziali di YouTube.
+
+PER CAMBIARE IL MESSAGGIO
+
+Apri index.html e modifica il testo dentro la sezione:
+<article class="love-message">

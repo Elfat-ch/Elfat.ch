@@ -338,20 +338,48 @@ button {
   opacity: 0.82;
 }
 
+.video-bg::before,
 .video-bg::after {
   content: "";
   position: absolute;
+  pointer-events: none;
+}
+
+.video-bg::before {
+  inset: -7%;
+  z-index: 0;
+  background-image:
+    linear-gradient(135deg, rgba(2, 1, 4, 0.64), rgba(255, 24, 79, 0.2) 44%, rgba(118, 199, 255, 0.14)),
+    url("assets/image0.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.35;
+  filter: blur(3px) saturate(1.12) contrast(1.06) brightness(0.68);
+  transform: scale(1.04);
+  animation: fallbackPan 18s ease-in-out infinite alternate;
+}
+
+.video-bg.use-fallback::before {
+  opacity: 0.92;
+}
+
+.video-bg.use-fallback iframe {
+  display: none;
+}
+
+.video-bg::after {
   inset: 0;
+  z-index: 2;
   background:
     radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.28) 42%, rgba(0, 0, 0, 0.48)),
     rgba(244, 143, 177, 0.05);
-  pointer-events: none;
 }
 
 .video-bg iframe {
   position: absolute;
   left: 50%;
   top: 50%;
+  z-index: 1;
   width: max(100vw, 177.78vh);
   height: max(56.25vw, 100vh);
   border: 0;
@@ -1114,6 +1142,16 @@ button {
   }
   to {
     transform: rotate(8deg) scale(1.08);
+  }
+}
+
+@keyframes fallbackPan {
+  from {
+    transform: scale(1.04) translate3d(-1.2%, -0.8%, 0);
+  }
+
+  to {
+    transform: scale(1.1) translate3d(1.2%, 0.8%, 0);
   }
 }
 

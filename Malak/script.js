@@ -10,6 +10,8 @@ const sceneMessage = document.getElementById("sceneMessage");
 const loveMessage = document.getElementById("loveMessage");
 const photo = document.getElementById("malakPhoto");
 const photoFallback = document.getElementById("photoFallback");
+const videoBg = document.querySelector(".video-bg");
+const backgroundVideo = document.getElementById("backgroundVideo");
 const canvas = document.getElementById("sparkCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -23,6 +25,31 @@ let starInterval;
 let photoTimers = [];
 let animationFrame;
 let introReady = false;
+
+function isIOSDevice() {
+  const userAgent = navigator.userAgent || "";
+  const iPhoneOrIPad = /iPad|iPhone|iPod/.test(userAgent);
+  const iPadDesktopMode = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+
+  return iPhoneOrIPad || iPadDesktopMode;
+}
+
+function prepareBackgroundVideo() {
+  if (!videoBg || !backgroundVideo) return;
+
+  if (isIOSDevice()) {
+    videoBg.classList.add("use-fallback");
+    stage.classList.add("video-ready");
+    return;
+  }
+
+  const src = backgroundVideo.dataset.src;
+  if (src && !backgroundVideo.src) {
+    backgroundVideo.src = src;
+  }
+}
+
+prepareBackgroundVideo();
 
 window.setTimeout(() => {
   stage.classList.add("video-ready");

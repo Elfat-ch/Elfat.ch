@@ -1,144 +1,554 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elfat</title>
-    <style>
-        :root {
-            --bg-primary: #0a0a0afb;
-            --bg-secondary: #111111f8;
-            --accent-color: #ffffff;
-            --text-primary: #ffffff;
-            --text-secondary: #8a8a8a;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            overflow-x: hidden;
-            font-size: 14px;
-        }
-
-        body {
-            min-height: 100vh;
-            background: var(--bg-secondary);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            color: var(--text-primary);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-        }
-
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        h1 {
-            font-size: 2.6rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        h1 .highlight {
-            color: #ffffff;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-        }
-
-        .subtitle {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-            max-width: 400px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        button {
-            padding: 10px 22px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        button:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
-        }
-
-        .footer {
-            margin-top: auto;
-            padding-top: 40px;
-            text-align: center;
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-        }
-
-        .footer a {
-            color: var(--text-secondary);
-            text-decoration: underline;
-            transition: color 0.3s ease;
-        }
-
-        .footer a:hover {
-            color: var(--text-primary);
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.4rem;
-            }
-
-            .footer {
-                font-size: 0.65rem;
-                padding: 0 10px;
-            }
-        }
-
-        h1,
-        a,
-        .footer {
-            position: relative;
-            z-index: 1;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@Elfat</title>
+  <link rel="icon" href="assets/sm64-mario.gif" type="image/gif">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <nav class="glass-tabs" aria-label="Navigazione principale">
+      <a class="brand" href="#" aria-label="Elfat home">elfat.ch</a>
 
-    <div class="main-content">
-        <h1>Hello, in <span class="highlight">elfat.ch</span></h1>
-        <p class="subtitle">Welcome to my personal website — take a look around.</p>
+      <div class="tab-list">
+        <span class="active-pill" aria-hidden="true"></span>
 
-        <a href="./My%20Profile/index.html">
-            <button type="button">Click me</button>
-        </a>
+        <button class="tab is-active" type="button" data-tab="home" aria-pressed="true">
+          <span>Home</span>
+        </button>
+
+        <button class="tab" type="button" data-tab="about" aria-pressed="false">
+          <span>About</span>
+        </button>
+
+        <button class="tab" type="button" data-tab="projects" aria-pressed="false">
+          <span>Projects</span>
+        </button>
+
+        <button class="tab" type="button" data-tab="privacy" aria-pressed="false">
+          <span>Privacy</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="screen">
+    <section class="panel is-visible" data-panel="home">
+      <div class="profile-avatar" aria-label="Foto profilo di Elfat">
+        <img src="assets/logo.gif" alt="Elfat">
+      </div>
+
+      <h1 class="home-title" data-glitch-title>Hello, i'm <span>Elfat</span>.</h1>
+      <p class="home-description" data-typewriter data-text="I am a self-taught software developer with experience in various programming languages and technologies. I developed my skills independently by building projects, experimenting, and solving problems. I specialize in database security and business data management, with a strong focus on privacy protection, regulatory compliance, and defending systems against unauthorized access, data breaches, and cyberattacks. I am committed to writing clean, reliable code and adapting quickly to new tools and technologies."></p>
+
+      <div class="accounts">
+        <h2>Other accounts</h2>
+
+        <div class="account-grid">
+          <a class="account-card" href="https://discord.com/users/1055927726994899144" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/discord.svg" alt="" class="account-icon">
+            <span>
+              <small>Discord</small>
+              _yomino
+            </span>
+          </a>
+
+          <a class="account-card" href="https://www.codecademy.com/profiles/_yomino" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/codecademy.svg" alt="" class="account-icon">
+            <span>
+              <small>Codecademy</small>
+              _yomino
+            </span>
+          </a>
+
+          <a class="account-card" href="https://steamcommunity.com/profiles/76561199201072780/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/steam.svg" alt="" class="account-icon">
+            <span>
+              <small>Steam</small>
+              يو يو yomino
+            </span>
+          </a>
+
+          <a class="account-card" href="https://www.youtube.com/@yomino__" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/youtube.svg" alt="" class="account-icon">
+            <span>
+              <small>YouTube</small>
+              @yomino__
+            </span>
+          </a>
+
+          <a class="account-card" href="https://psnprofiles.com/p-4xqk17" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/playstation.svg" alt="" class="account-icon">
+            <span>
+              <small>PlayStation</small>
+              p-4xqk17
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="spotify-embed">
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1fvYJM9hZ55oZpufQ5vSnl?utm_source=generator&si=6cfb02d883a14de7" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section class="panel" data-panel="about">
+      <div class="about-content">
+        <h1 class="section-title">About me</h1>
+
+        <p data-typewriter>
+          As you probably know, my name is Elfat, though most people
+          online know me as <span>@yomino</span>. I've been into programming,
+          computers, and pretty much anything tech-related for as long as I
+          can remember. I also enjoy playing games and listening to music!
+        </p>
+
+        <p data-typewriter>
+          I have experience with a wide range of programming languages.
+          I focus on building clean and solid projects, learning new tools,
+          and improving by experimenting with real
+          ideas. Beyond software development, I also like exploring
+          systems, security, and the way modern technology works.
+        </p>
+
+        <h2>Tech</h2>
+        <p data-typewriter>
+          A list of programming languages, libraries and frameworks I have
+          experience with.
+        </p>
+
+        <div class="skills">
+          <h3>Technical skills</h3>
+
+          <div class="skills-grid">
+            <article class="skill-card" style="--level: 100%">
+              <div class="skill-top">
+                <img src="assets/icons/logos-language/html.svg" alt="" class="skill-icon">
+                <strong>HTML</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+              <small>100%</small>
+            </article>
+
+            <article class="skill-card" style="--level: 85%">
+              <div class="skill-top">
+                <img src="assets/icons/logos-language/css3.svg" alt="" class="skill-icon">
+                <strong>CSS</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+              <small>85%</small>
+            </article>
+
+            <article class="skill-card" style="--level: 80%">
+              <div class="skill-top">
+                <img src="assets/icons/logos-language/JS.png" alt="" class="skill-icon">
+                <strong>JavaScript</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+              <small>80%</small>
+            </article>
+
+            <article class="skill-card" style="--level: 80%">
+              <div class="skill-top">
+                <img src="assets/icons/logos-language/Node.js.png" alt="" class="skill-icon">
+                <strong>Node.js</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+              <small>80%</small>
+            </article>
+
+            <article class="skill-card" style="--level: 85%">
+              <div class="skill-top">
+                <img src="assets/icons/logos-language/Sql.webp" alt="" class="skill-icon">
+                <strong>SQL</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+              <small>85%</small>
+            </article>
+
+            <article class="skill-card" style="--level: 60%">
+              <div class="skill-top">
+                <img src="assets/icons/logos-language/flutter.webp" alt="" class="skill-icon">
+                <strong>Flutter</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+              <small>60%</small>
+            </article>
+
+            <article class="skill-card" style="--level: 80%">
+              <div class="skill-top">
+                <img src="assets/icons/logos-language/lua.webp" alt="" class="skill-icon">
+                <strong>Lua</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+              <small>80%</small>
+            </article>
+
+            <article class="skill-card" style="--level: 70%">
+              <div class="skill-top">
+                <img src="assets/icons/logos-language/LuaU.png" alt="" class="skill-icon">
+                <strong>Luau</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+              <small>70%</small>
+            </article>
+
+            <article class="skill-card" style="--level: 20%">
+              <div class="skill-top">
+                <img src="assets/icons/logos-language/CSharp.png" alt="" class="skill-icon">
+                <strong>C#</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+              <small>20%</small>
+            </article>
+          </div>
+        </div>
+
+        <div class="specializations">
+          <h3>Specializations</h3>
+
+          <div class="specializations-list">
+            <div class="specialization-item">Database security and secure data management</div>
+            <div class="specialization-item">Data processing, analysis and efficient management</div>
+            <div class="specialization-item">GDPR compliance and client data privacy protection</div>
+            <div class="specialization-item">Configuration and management of SSL/TLS certificates on Windows Server</div>
+            <div class="specialization-item">Development and management of RESTful APIs</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" data-panel="projects">
+      <div class="projects-content">
+        <h1 class="section-title">Projects</h1>
+
+        <div class="projects-grid">
+          <article class="project-card" data-project="hydro-shop" tabindex="0" role="button" aria-label="Open Hydro Shop details">
+            <div class="project-logo">
+              <img src="assets/Projects-logos/hydroshop.webp" alt="Hydro Shop">
+            </div>
+            <div class="project-info">
+              <h2>Hydro Shop</h2>
+              <p data-typewriter>Marketing Collaborator / Owner</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="security-net" tabindex="0" role="button" aria-label="Open Security.Net details">
+            <div class="project-logo">
+              <img src="assets/Projects-logos/Logo.webp" alt="Security.Net">
+            </div>
+            <div class="project-info">
+              <h2>Security.Net</h2>
+              <p data-typewriter>Developed by _yomino</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="security-technology" tabindex="0" role="button" aria-label="Open Security Technology details">
+            <div class="project-logo">
+              <img src="assets/Projects-logos/TECHNOLOGY.webp" alt="Security Technology">
+            </div>
+            <div class="project-info">
+              <h2>Security Technology</h2>
+              <p data-typewriter>Developed Code</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="nexus-shop" tabindex="0" role="button" aria-label="Open Nexus Shop details">
+            <div class="project-logo">
+              <img src="assets/Projects-logos/NexusShop.gif" alt="Nexus Shop">
+            </div>
+            <div class="project-info">
+              <h2>Nexus Shop</h2>
+              <p data-typewriter>Developed by Me / Owner</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="nexus-menu" tabindex="0" role="button" aria-label="Open Nexus Menu details">
+            <div class="project-logo">
+              <img src="assets/Projects-logos/NexusMenu.webp" alt="Nexus Menu">
+            </div>
+            <div class="project-info">
+              <h2>Nexus Menu</h2>
+              <p data-typewriter>Developed by Me</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="adriatic-studios" tabindex="0" role="button" aria-label="Open Adriatic Studios details">
+            <div class="project-logo">
+              <img src="assets/Projects-logos/noFilter.webp" alt="Adriatic Studios">
+            </div>
+            <div class="project-info">
+              <h2>Adriatic Studios</h2>
+              <p data-typewriter>AntiChat Developer</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="zenith-project" tabindex="0" role="button" aria-label="Open Zenith Project details">
+            <div class="project-logo">
+              <img src="assets/Projects-logos/Zenith.avif" alt="Zenith Project">
+            </div>
+            <div class="project-info">
+              <h2>Zenith Project</h2>
+              <p data-typewriter>Developed Code & Owner</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="project-gallery">
+          <div class="gallery-heading">
+            <h2>Gallery</h2>
+            <div class="gallery-filter" data-gallery-dropdown>
+              <span>Filter</span>
+              <button class="gallery-filter-button" type="button" aria-haspopup="listbox" aria-expanded="false">
+                <span class="gallery-filter-current">
+                  <span class="gallery-filter-logo gallery-filter-logo--all">All</span>
+                  <span>All gallery</span>
+                </span>
+                <img class="gallery-filter-arrow" src="assets/icons/chevron-down.svg" alt="">
+              </button>
+
+              <div class="gallery-filter-menu" role="listbox">
+                <button class="gallery-filter-option is-active" type="button" data-filter="all">
+                  <span class="gallery-filter-logo gallery-filter-logo--all">All</span>
+                  <span>All gallery</span>
+                </button>
+                <button class="gallery-filter-option" type="button" data-filter="nexus-shop">
+                  <img src="assets/Projects-logos/NexusShop.gif" alt="">
+                  <span>Nexus Shop</span>
+                </button>
+                <button class="gallery-filter-option" type="button" data-filter="hydro-shop">
+                  <img src="assets/Projects-logos/hydroshop.webp" alt="">
+                  <span>Hydro Shop</span>
+                </button>
+                <button class="gallery-filter-option" type="button" data-filter="security-technology">
+                  <img src="assets/Projects-logos/TECHNOLOGY.webp" alt="">
+                  <span>Security Technology</span>
+                </button>
+                <button class="gallery-filter-option" type="button" data-filter="nexus-menu">
+                  <img src="assets/Projects-logos/NexusMenu.webp" alt="">
+                  <span>Nexus Menu</span>
+                </button>
+                <button class="gallery-filter-option" type="button" data-filter="security-net">
+                  <img src="assets/Projects-logos/Logo.webp" alt="">
+                  <span>Security.Net</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-grid">
+            <article class="gallery-card" data-project-gallery="nexus-shop">
+              <button class="gallery-media gallery-media-button" type="button" data-lightbox-src="assets/Projects Gallery/nexusbanner.gif" data-lightbox-title="Nexus Shop" data-lightbox-description="Developed by Me / Owner">
+                <img src="assets/Projects Gallery/nexusbanner.gif" alt="Nexus Shop">
+              </button>
+              <div class="gallery-caption">
+                <h3>Nexus Shop</h3>
+                <p>Developed by Me / Owner</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-project-gallery="hydro-shop">
+              <button class="gallery-media gallery-media-button" type="button" data-lightbox-src="assets/Projects Gallery/Aggiungi_un_titolo.webp" data-lightbox-title="Hydro Shop" data-lightbox-description="Marketing Collaborator / Owner">
+                <img src="assets/Projects Gallery/Aggiungi_un_titolo.webp" alt="Hydro Shop">
+              </button>
+              <div class="gallery-caption">
+                <h3>Hydro Shop</h3>
+                <p>Marketing Collaborator / Owner</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-project-gallery="security-technology">
+              <button class="gallery-media gallery-media-button" type="button" data-lightbox-src="assets/Projects Gallery/Security_Technology.webp" data-lightbox-title="Security Technology" data-lightbox-description="Main control panel">
+                <img src="assets/Projects Gallery/Security_Technology.webp" alt="Security Technology">
+              </button>
+              <div class="gallery-caption">
+                <h3>Security Technology</h3>
+                <p>Main control panel</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-project-gallery="nexus-menu">
+              <button class="gallery-media gallery-media-button" type="button" data-lightbox-src="assets/Projects Gallery/NexusMenu.webp" data-lightbox-title="Nexus Menu" data-lightbox-description="Developed by Me">
+                <img src="assets/Projects Gallery/NexusMenu.webp" alt="Nexus Menu">
+              </button>
+              <div class="gallery-caption">
+                <h3>Nexus Menu</h3>
+                <p>Developed by Me</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-project-gallery="security-technology">
+              <button class="gallery-media gallery-media-button" type="button" data-lightbox-src="assets/Projects Gallery/Security_Development.webp" data-lightbox-title="Security Technology" data-lightbox-description="Developed Code">
+                <img src="assets/Projects Gallery/Security_Development.webp" alt="Security Development">
+              </button>
+              <div class="gallery-caption">
+                <h3>Security Technology</h3>
+                <p>Developed Code</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-project-gallery="hydro-shop">
+              <div class="gallery-media">
+                <video muted playsinline preload="metadata" disablepictureinpicture data-force-muted>
+                  <source src="assets/Projects Gallery/Voices.mp4" type="video/mp4">
+                </video>
+                <div class="video-controls">
+                  <button class="video-toggle" type="button" aria-label="Play video" title="Play">
+                    <img src="assets/icons/play-fill.svg" alt="">
+                  </button>
+                  <button class="video-fullscreen" type="button" aria-label="Fullscreen video" title="Fullscreen">
+                    <img src="assets/icons/fullscreen.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="gallery-caption">
+                <h3>Hydro Shop</h3>
+                <p>Hydro Shop Feedback</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-project-gallery="security-technology">
+              <button class="gallery-media gallery-media-button" type="button" data-lightbox-src="assets/Projects Gallery/security_Technology.png" data-lightbox-title="Security Technology" data-lightbox-description="Main control panel">
+                <img src="assets/Projects Gallery/security_Technology.png" alt="Security Technology">
+              </button>
+              <div class="gallery-caption">
+                <h3>Security Technology</h3>
+                <p>Main control panel</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-project-gallery="nexus-menu">
+              <button class="gallery-media gallery-media-button" type="button" data-lightbox-src="assets/Projects Gallery/NexusMenuPanel.webp" data-lightbox-title="Nexus Menu" data-lightbox-description="Nexus Menu GUI">
+                <img src="assets/Projects Gallery/NexusMenuPanel.webp" alt="Nexus Menu panel">
+              </button>
+              <div class="gallery-caption">
+                <h3>Nexus Menu</h3>
+                <p>Nexus Menu GUI</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-project-gallery="hydro-shop">
+              <div class="gallery-media">
+                <video muted playsinline preload="metadata" disablepictureinpicture data-force-muted>
+                  <source src="assets/Projects Gallery/Hydro_Shop.mp4" type="video/mp4">
+                </video>
+                <div class="video-controls">
+                  <button class="video-toggle" type="button" aria-label="Play video" title="Play">
+                    <img src="assets/icons/play-fill.svg" alt="">
+                  </button>
+                  <button class="video-fullscreen" type="button" aria-label="Fullscreen video" title="Fullscreen">
+                    <img src="assets/icons/fullscreen.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="gallery-caption">
+                <h3>Hydro Shop</h3>
+                <p>Hydro Shop Feedback</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-project-gallery="security-net">
+              <button class="gallery-media gallery-media-button" type="button" data-lightbox-src="assets/Projects Gallery/security.net_verification.webp" data-lightbox-title="Security.Net" data-lightbox-description="Security.Net Verification">
+                <img src="assets/Projects Gallery/security.net_verification.webp" alt="Security.Net verification">
+              </button>
+              <div class="gallery-caption">
+                <h3>Security.Net</h3>
+                <p>Security.Net Verification</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-project-gallery="nexus-shop">
+              <div class="gallery-media">
+                <video muted playsinline preload="metadata" disablepictureinpicture data-force-muted>
+                  <source src="assets/Projects Gallery/Nexus_Shop.mp4" type="video/mp4">
+                </video>
+                <div class="video-controls">
+                  <button class="video-toggle" type="button" aria-label="Play video" title="Play">
+                    <img src="assets/icons/play-fill.svg" alt="">
+                  </button>
+                  <button class="video-fullscreen" type="button" aria-label="Fullscreen video" title="Fullscreen">
+                    <img src="assets/icons/fullscreen.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="gallery-caption">
+                <h3>Nexus Shop</h3>
+                <p>Nexus Shop Feedback</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="gallery-pagination" aria-label="Gallery pages"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" data-panel="privacy">
+      <div class="privacy-content">
+        <div class="privacy-grid">
+          <article class="privacy-card">
+            <h2>Data Protection</h2>
+            <p>
+              This site does not collect personal data without your consent
+              and does not share information with third parties.
+            </p>
+            <p>
+              The view counter reads the initial value from views_cache.json
+              and uses localStorage only to avoid duplicate counts in the same
+              browser.
+            </p>
+          </article>
+
+          <article class="privacy-card">
+            <h2>Terms and Conditions</h2>
+            <p>
+              Copying, modifying, or redistributing texts, images, logos,
+              projects, or code without written permission is prohibited.
+            </p>
+            <p>
+              By using this site, you accept these terms.
+            </p>
+          </article>
+
+          <article class="privacy-card">
+            <h2>Copyright</h2>
+            <p>© 2026 Elfat. All rights reserved.</p>
+            <a href="//www.dmca.com/Protection/Status.aspx?ID=60a9451b-92b9-4db6-876b-f3b555731832" title="DMCA.com Protection Status" class="dmca-badge">
+              <img src="https://images.dmca.com/Badges/dmca_protected_8_120.png?ID=60a9451b-92b9-4db6-876b-f3b555731832" alt="DMCA.com Protection Status">
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="galleryLightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close preview">×</button>
+    <img src="" alt="" class="lightbox-image">
+    <div class="lightbox-info">
+      <h2></h2>
+      <p></p>
     </div>
+  </div>
 
-    <div class="footer">
-        made with ❤️ by Elfat • <a href="https://github.com/Elfat-ch/Elfat.ch" target="_blank" rel="noopener noreferrer">source code</a>
+  <div class="project-modal" id="projectModal" aria-hidden="true">
+    <div class="project-modal-card" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+      <button class="project-modal-close" type="button" aria-label="Close project details">×</button>
+      <div class="project-modal-head">
+        <img src="" alt="" class="project-modal-logo">
+        <div>
+          <h2 id="projectModalTitle"></h2>
+          <p class="project-modal-role"></p>
+        </div>
+      </div>
+      <p class="project-modal-description"></p>
+      <div class="project-modal-tags"></div>
     </div>
+  </div>
 
+  <script src="script.js"></script>
+  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
 </body>
-
 </html>
